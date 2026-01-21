@@ -28,7 +28,7 @@ Authorization: Bearer <token>
 ```json
 {
   "type": "weight",
-  "value": 70.5,
+  "value": "70.5",
   "unit": "kg",
   "note": "หลังออกกำลังกาย"
 }
@@ -49,22 +49,22 @@ Authorization: Bearer <token>
 
 ```json
 // น้ำหนัก
-{ "type": "weight", "value": 70.5, "unit": "kg" }
+{ "type": "weight", "value": "70.5", "unit": "kg" }
 
 // ส่วนสูง
-{ "type": "height", "value": 170, "unit": "cm" }
+{ "type": "height", "value": "170", "unit": "cm" }
 
 // ความดันโลหิต
-{ "type": "blood_pressure", "systolic": 120, "diastolic": 80, "unit": "mmHg" }
+{ "type": "blood_pressure", "value": "120/80", "unit": "mmHg" }
 
 // น้ำตาลในเลือด
-{ "type": "blood_sugar", "value": 95, "unit": "mg/dL", "timing": "fasting" }
+{ "type": "blood_sugar", "value": "95", "unit": "mg/dL", "note": "fasting" }
 
 // อุณหภูมิ
-{ "type": "temperature", "value": 36.5, "unit": "celsius" }
+{ "type": "temperature", "value": "36.5", "unit": "celsius" }
 
-// อื่นๆ (flexible)
-{ "type": "exercise", "activity": "running", "duration": 30, "unit": "minutes", "calories": 250 }
+// การออกกำลังกาย
+{ "type": "exercise", "value": "running 30 minutes", "unit": "minutes", "note": "burned 250 calories" }
 ```
 
 #### Success Response (201 Created)
@@ -77,7 +77,7 @@ Authorization: Bearer <token>
     "id": 1,
     "patientId": 5,
     "type": "weight",
-    "value": 70.5,
+    "value": "70.5",
     "unit": "kg",
     "note": "หลังออกกำลังกาย",
     "createdAt": "2026-01-19T10:30:00.000Z",
@@ -157,7 +157,7 @@ Authorization: Bearer <token>
       "id": 1,
       "patientId": 5,
       "type": "weight",
-      "value": 70.5,
+      "value": "70.5",
       "unit": "kg",
       "createdAt": "2026-01-19T10:30:00.000Z",
       "updatedAt": "2026-01-19T10:30:00.000Z"
@@ -166,8 +166,7 @@ Authorization: Bearer <token>
       "id": 2,
       "patientId": 5,
       "type": "blood_pressure",
-      "systolic": 120,
-      "diastolic": 80,
+      "value": "120/80",
       "unit": "mmHg",
       "createdAt": "2026-01-18T09:15:00.000Z",
       "updatedAt": "2026-01-18T09:15:00.000Z"
@@ -236,7 +235,7 @@ Authorization: Bearer <token>
     "id": 1,
     "patientId": 5,
     "type": "weight",
-    "value": 70.5,
+    "value": "70.5",
     "unit": "kg",
     "note": "หลังออกกำลังกาย",
     "createdAt": "2026-01-19T10:30:00.000Z",
@@ -313,7 +312,7 @@ Authorization: Bearer <token>
 ```json
 {
   "type": "weight",
-  "value": 71.0,
+  "value": "71.0",
   "unit": "kg",
   "note": "หลังรับประทานอาหาร"
 }
@@ -340,7 +339,7 @@ Authorization: Bearer <token>
     "id": 1,
     "patientId": 5,
     "type": "weight",
-    "value": 71.0,
+    "value": "71.0",
     "unit": "kg",
     "note": "หลังรับประทานอาหาร",
     "createdAt": "2026-01-19T10:30:00.000Z",
